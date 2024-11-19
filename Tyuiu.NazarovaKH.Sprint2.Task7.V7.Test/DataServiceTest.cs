@@ -10,12 +10,12 @@ namespace Tyuiu.NazarovaKH.Sprint2.Task7.V7.Test
         {
             DataService ds = new DataService();
 
-            double x = 0.5;
-            double y = 0.8;
+            double x = 0;
+            double y = 0.5;
 
             bool res = ds.CheckDotInShadedArea(x, y);
 
-            bool wait = false;
+            bool wait = true;
 
             Assert.AreEqual(wait, res);
         }

@@ -9,11 +9,11 @@ namespace Tyuiu.NazarovaKH.Sprint2.Task7.V7.Lib
             bool res;
             if ((y <= x) && (y <= 2 - x * x) && (x >= 0))
             {
-                res = true;
+                res = false;
             }
             else
             {
-                res = false;
+                res = true;
             }
             return res;
         }
