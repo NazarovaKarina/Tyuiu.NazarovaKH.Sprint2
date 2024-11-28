@@ -13,33 +13,24 @@ namespace Tyuiu.NazarovaKH.Sprint2.Task5.V2
             Console.WriteLine("***************************************************************************");
 
             Console.WriteLine("Введите номер месяца: ");
-            int numMonth = Convert.ToInt32(Console.ReadLine());
+            int MonthSeason = Convert.ToInt32(Console.ReadLine());
+
+            string res;
+
+            if ((MonthSeason < 1) || (MonthSeason > 12))
+            {
+                res = "Введено неверное значение";
+            }
+            else
+            {
+                res = "Это сезон: " + ds.FindMonthSeason(MonthSeason);
+
+            }
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-
-            if ((numMonth == 3) || (numMonth == 4) || (numMonth == 5)) 
-            {
-                Console.WriteLine("Время года данного месяца: весна");
-            }
-            if ((numMonth == 6) || (numMonth == 7) || (numMonth == 8)) 
-            {
-                Console.WriteLine("Время года данного месяца: лето");
-            }
-            if ((numMonth == 9) || (numMonth == 10) || (numMonth == 11))
-                        {
-                Console.WriteLine("Время года данного месяца: осень");
-            }
-            if ((numMonth == 12) || (numMonth == 1) || (numMonth == 2))
-            {
-                Console.WriteLine("Время года данного месяца: зима");
-            }
-            if ((numMonth > 12 ) || (numMonth < 1))
-            {
-                Console.WriteLine("Введено неверное значение");
-            }
-
+            Console.WriteLine(res);
             Console.ReadKey();
         }
     }
