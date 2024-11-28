@@ -14,7 +14,6 @@ namespace Tyuiu.NazarovaKH.Sprint2.Task6.V12.Lib
                     m = 12;
                     n = 31;
                 }
-
                 else
                 {
                     m -= 1;
@@ -40,7 +39,10 @@ namespace Tyuiu.NazarovaKH.Sprint2.Task6.V12.Lib
                 n -= 1;
             }
 
-            return (n.ToString() + '.' + m.ToString() + '.' + g.ToString());
+            string formattedDay = n < 10 ? $"0{n}" : n.ToString();
+            string formattedMonth = m < 10 ? $"0{m}" : m.ToString();
+
+            return $"{formattedDay}.{formattedMonth}.{g}";
         }
     }
 }
